@@ -1,0 +1,65 @@
+@font: 'Junge', serif;
+@default_size: 16px;
+
+* { margin: 0; padding: 0; outline: 0; border: 0; }
+
+header, section, footer,
+aside, nav, article, figure {
+    display: block;
+}
+
+/* styles */
+
+body {
+    font-family: @font;
+    font-size: @default_size;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: @font;
+    font-size: @default_size * 3;
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+/* positioning */
+header {
+    text-align: center;
+    padding: 15px 0px;
+    width: 100%;
+    margin-bottom: 25px;
+    position: fixed;
+    z-index: 10;
+    float: top;
+}
+
+#headercontainer, #contentcontainer {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+section {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 210px;
+}
+
+#contentcontainer {
+    float: none;
+    padding-top: 0px;
+}
+
+footer {
+    float: left;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    font-size: @default_size * .75;
+}

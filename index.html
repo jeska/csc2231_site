@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Junge' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+
+        <script src="js/less.js" type="text/javascript"></script>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script>
+        $.ajaxSetup({
+            cache: false,
+
+        });
+        var load_gif = "<img src='imgs/ajax_load.gif' alt='Loading streams...' />";
+        var sessions = [];
+        var streams = [];
+        $(document).ready(function() {
+            $.getJSON('sessions', function(data) {
+                var streams = data["Streams"];
+                var items = [];
+ 
+                $.each(streams, function(index, stream) {
+                    $.each(stream, function(key, val) {
+                        items.push('<li>' + key + ', ' + val + '</li>');
+                    });
+                });
+
+                $('<ul />', {
+                    html: items.join('')
+                }).appendTo('#changethis');
+            });
+        });
+        
+        </script>
+        <title>MultiMics</title>
+    </head>
+    <body>
+        <header id="headercontainer">
+                <h1>MultiMics</h1>
+            </div>
+        </header>
+        <section id="contentcontainer">
+            <h2>Select a channel to listen to:</h2>
+            <div id="changethis"></div>
+            <footer>
+                site created by Jessica David and Xavier Snelgrove for UofT CSC2231 W2013 project
+            </footer>
+        </section>
+    </body>
+</html>

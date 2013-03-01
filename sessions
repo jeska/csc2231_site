@@ -1,0 +1,18 @@
+{
+    "Streams": [
+        {
+            "id": "1",
+            "name": "First stream",
+            "phones": {
+                "ids": ["1234", "2345"]
+            }
+        },
+        {  
+            "id": "2",
+            "name": "Second stream",
+            "phones": {
+                "ids": ["3456", "4567"]
+            }
+        }
+    ]
+}
