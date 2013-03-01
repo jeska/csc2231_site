@@ -1,6 +1,14 @@
 @font: 'Junge', serif;
 @default_size: 16px;
 
+.round (@rad: 5px) {
+    -webkit-border-radius: @rad;
+    -moz-border-radius: @rad;
+    -ms-border-radius: @rad;
+    -o-border-radius: @rad;
+    border-radius: @rad;
+}
+
 * { margin: 0; padding: 0; outline: 0; border: 0; }
 
 header, section, footer,
@@ -26,6 +34,19 @@ h1 {
 
 h2 {
     font-weight: normal;
+}
+
+.stream {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 5px;
+    text-align: center;
+    font-size: @default_size * 1.25;
+    color: #000;
+    background-color: #ddd;
+    .round;
 }
 
 /* positioning */
