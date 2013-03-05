@@ -37,7 +37,7 @@ var showStreamingPhones = function(id) {
     $("#streams").fadeOut('slow', function() {
         $(this).remove();
         $.each(selectedStream.ids, function(index, name) {
-            var audio = new Audio("wavs/test.wav");
+            var audio = new Audio("audio/" + name);
             $('<div class="phone" id="' + name + '">' + 
                 '<img src="imgs/phone.png" />' +
                 '<p>Stream #' + (index + 1) + ': ' + name + '</p>' +
